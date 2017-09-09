@@ -6,18 +6,18 @@
 */
 
 // DEV
-if ( !defined(THEME_DIR_NAME) ) { define('THEME_DIR_NAME', 'zerowaste'); }
-if ( !defined(THEME_DIR_PATH) ) { define('THEME_DIR_PATH', get_template_directory_uri()); }
-if ( !defined(__ROOT__) ) { define('__ROOT__', dirname(dirname(__FILE__))); }
-if ( !defined(DEV) ) { define('DEV', true); }
-if ( !defined(ADMIN_STYLE) ) { define('ADMIN_STYLE', false); }
-if ( !defined(EDITOR_STYLE) ) { define('EDITOR_STYLE', false); }
+define('THEME_DIR_NAME', 'zerowaste');
+define('THEME_DIR_PATH', get_template_directory_uri());
+define('__ROOT__', dirname(dirname(__FILE__)));
+define('DEV', true);
+define('ADMIN_STYLE', false);
+define('EDITOR_STYLE', false);
 
 // VALUES
 
-if ( !defined(POST_EXCERPT_LENGTH) ) { define('POST_EXCERPT_LENGTH', 40); }
-if ( !defined(GOOGLE_ANALYTICS_ID) ) { define('GOOGLE_ANALYTICS_ID', ''); }
-if ( !defined(GOOGLE_MAP_API_KEY) ) { define('GOOGLE_MAP_API_KEY', ''); }
+define('POST_EXCERPT_LENGTH', 40);
+define('GOOGLE_ANALYTICS_ID', '');
+define('GOOGLE_MAP_API_KEY', '');
 /* ACF Google Maps */
 function wpc_acf_init() {
 	acf_update_setting('google_api_key', GOOGLE_MAP_API_KEY);
@@ -25,34 +25,39 @@ function wpc_acf_init() {
 add_action('acf/init', 'wpc_acf_init');
 
 // SLIMP
-if ( !defined(CREDITOR_REF) ) { define('CREDITOR_REF', 'hbil7wmezce4'); }
-if ( !defined(API_KEY) ) { define('API_KEY', 'hbil7wmezce4'); }
-if ( !defined(SECR_KEY) ) { define('SECR_KEY', 't8lWqtLCz4hdre~lSNH2pIb3V1r8DAQhUDvX'); }
+define('CREDITOR_REF', get_field('slimpay_creditor_ref', 'option'));
+define('API_KEY', get_field('slimpay_api_key', 'option'));
+define('SECR_KEY', get_field('slimpay_secret_key', 'option'));
 
-if ( !defined(RETURN_AFTER_URL) ) { define('RETURN_AFTER_URL', 32); }
-if ( !defined(NOTIFICATION_URL) ) { define('NOTIFICATION_URL', 20); }
-
+// Pages redirection form
+// Local
+define('RETURN_AFTER_URL', 32);
+define('NOTIFICATION_URL', 20);
+/*// Online
+define('RETURN_AFTER_URL', 44);
+define('NOTIFICATION_URL', 13);
+*/
 // LINKS
 
-if ( !defined(FACEBOOK) ) { define('FACEBOOK', 'https://www.facebook.com/'); }
-if ( !defined(TWITTER) ) { define('TWITTER', 'https://twitter.com/'); }
+define('FACEBOOK', 'https://www.facebook.com/');
+define('TWITTER', 'https://twitter.com/');
 
 
 // MAILS
 
-if ( !defined(CONTACT_GENERAL) ) { define('CONTACT_GENERAL', 'rollandyann@gmail.com'); }
-if ( !defined(CONTACT_GENERAL_2) ) { define('CONTACT_GENERAL_2', 'thibaut.caroli.pro@gmail.com'); }
+define('CONTACT_GENERAL', 'rollandyann@gmail.com');
+define('CONTACT_GENERAL_2', 'thibaut.caroli.pro@gmail.com');
 
 
 // ACTIVATE
 
-if ( !defined(PAGE_EXCERPT) ) { define('PAGE_EXCERPT', false); }
-if ( !defined(PAGE_TAXO) ) { define('PAGE_TAXO', false); }
-if ( !defined(ADD_THUMBNAILS) ) { define('ADD_THUMBNAILS', false); }
-if ( !defined(CUSTOM_POST_TYPE) ) { define('CUSTOM_POST_TYPE', true); }
-if ( !defined(CUSTOM_TAXONOMY) ) { define('CUSTOM_TAXONOMY', true); }
-if ( !defined(ACF_OPTION_PAGE) ) { define('ACF_OPTION_PAGE', true); }
-if ( !defined(DISALLOW_FILE_EDIT) ) { define('DISALLOW_FILE_EDIT', true); }
+define('PAGE_EXCERPT', false);
+define('PAGE_TAXO', false);
+define('ADD_THUMBNAILS', false);
+define('CUSTOM_POST_TYPE', true);
+define('CUSTOM_TAXONOMY', true);
+define('ACF_OPTION_PAGE', true);
+define('DISALLOW_FILE_EDIT', true);
 
 
 /*

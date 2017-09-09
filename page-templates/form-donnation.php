@@ -37,7 +37,8 @@
 						'field_groups' => array('group_597b30139d914'),
 						'submit_value'	=> 'Envoyer',
 						'html_submit_button'	=> '<input type="submit" value="%s" />',
-						'html_submit_spinner'	=> '<span class="acf-spinner"></span>'
+						'html_submit_spinner'	=> '<span class="acf-spinner"></span>',
+						//'return' => '%post_url%?foo=bar'
 					);
 					acf_form($settings_acf_form_add);					
 

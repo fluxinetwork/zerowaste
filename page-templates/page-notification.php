@@ -1,7 +1,7 @@
 <?php /* Template Name: Notifications Slimpay */ ?>
 <?php
 	// HTTP Client	
-	//require_once(__ROOT__.'/app/httpclient/autoload.php'); 
+	require_once(__ROOT__.'/app/httpclient/autoload.php'); 
 ?>
 
 <?php get_header(); ?>
@@ -11,8 +11,11 @@
 	</header>
 
 	<?php 
-		/*$body = file_get_contents('php://input');
-		$order = \HapiClient\Hal\Resource::fromJson($body);*/
+		if( isset($_GET['message']) ):
+			$message = base64_decode($_GET['message']);
+			echo $message;
+
+		endif;
 	?>
 
 <?php get_footer(); ?>
