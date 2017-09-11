@@ -45,12 +45,12 @@ function fluxi_acf_save_post( $post_id ) {
 				// montant transaction / abo
 				$montant = 100;
 				// ref Transaction
-				$subscriber_ref = bin2hex(random_bytes(35));
+				$subscriber_ref = bin2hex(random_bytes(14));
 				// ref First Debi
-				$reference_fd = bin2hex(random_bytes(35));
+				$reference_fd = bin2hex(random_bytes(14));
 				$label_fd = "Premier don à Zero Waste France";
 				// ref Direct Debi
-				$reference_dd = bin2hex(random_bytes(35));
+				$reference_dd = bin2hex(random_bytes(14));
 				$label_dd = "Don récurrent à Zero Waste France";
 				// tok Slim
 				$access_token = '';
