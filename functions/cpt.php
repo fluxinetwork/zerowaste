@@ -9,15 +9,15 @@
 if ( CUSTOM_POST_TYPE ) {
 	// CPT 
 	function create_cpts() {
-		// Don
-		$labels_dons = array(
-			'name' => __( 'Dons', '' ),
-			'singular_name' => __( 'Don', '' ),
+		// Outil
+		$labels_outil = array(
+			'name' => __( 'Outils', '' ),
+			'singular_name' => __( 'Outil', '' ),
 			);
 
-		$args_don = array(
-			'label' 				=> __( 'Dons', '' ),
-			'labels' 				=> $labels_dons,
+		$args_outil = array(
+			'label' 				=> __( 'Outils', '' ),
+			'labels' 				=> $labels_outil,
 			'description' 			=> '',
 			'public' 				=> true,
 			'show_ui' 				=> true,
@@ -29,17 +29,17 @@ if ( CUSTOM_POST_TYPE ) {
 			'capability_type' 		=> 'post',
 			'map_meta_cap' 			=> true,
 			'hierarchical' 			=> false,
-			'rewrite' 				=> array( 'slug' => 'dons', 'with_front' => true ),
+			'rewrite' 				=> array( 'slug' => 'outils', 'with_front' => true ),
 			'query_var' 			=> true,
 
 			'supports' 				=> array( 'title', 'author' ),
-			'taxonomies' 			=> array( ),
+			'taxonomies' 			=> array( 'category', 'post_tag' ),
 		);
-		register_post_type( 'dons', $args_don );
+		register_post_type( 'outils', $args_outil );
 
 
 	}
-	add_action( 'init', 'create_cpts' );
+	//add_action( 'init', 'create_cpts' );
 
 
 }

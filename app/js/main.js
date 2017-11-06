@@ -52,26 +52,15 @@ jQuery(window).on('load',function() {
 
 var FOO = {
     common: {
-        init: function() {            
-            jQuery('.fitvid').fitVids();            
-        }
-    },
-    page_has_filters: {
-        init: function(){
-            initFluxiFilterPosts();
-            initLoadMore();
+        init: function() {
+            jQuery('.fitvid').fitVids();
         }
     },
     home: {
         init: function() {
             isHome = true;
         }
-    },
-    js_contact_form: {
-        init: function() {
-            initFormContact();
-        }
-    }    
+    }
 };
 
 var UTIL = {
@@ -165,6 +154,7 @@ function debouncer( func , timeout ) {
 
 function debouncer_handler() {
     calc_window();
+    display_cat_bt();
 }
 if ( resizeDebouncer ) {
     jQuery( window ).bind( "resize", debouncer(debouncer_handler) );

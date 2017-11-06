@@ -17,8 +17,3 @@ require_once locate_template('/functions/rss.php');
 require_once locate_template('/functions/app-functions.php');  
 require_once locate_template('/functions/cpt.php');
 require_once locate_template('/functions/menus.php');
-
-// HTTP CLIENT
-
-//require_once(__ROOT__.'/app/httpclient/autoload.php');
-

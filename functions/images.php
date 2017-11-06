@@ -16,7 +16,7 @@ add_image_size('name', width, height, crop);
 */
 
 function add_img_sizes() {
-	add_image_size('card--rss', 260, 175, true);
+	//add_image_size('name', 260, 175, true);
 }
 //add_action('after_setup_theme', 'add_img_sizes');
 

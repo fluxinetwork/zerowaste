@@ -6,9 +6,9 @@
 */
 
 // DEV
-define('THEME_DIR_NAME', 'zerowaste');
+
+define('THEME_DIR_NAME', 'fluxi_wp_start');
 define('THEME_DIR_PATH', get_template_directory_uri());
-define('__ROOT__', dirname(dirname(__FILE__)));
 define('DEV', true);
 define('ADMIN_STYLE', false);
 define('EDITOR_STYLE', false);
@@ -24,19 +24,7 @@ function wpc_acf_init() {
 }
 add_action('acf/init', 'wpc_acf_init');
 
-// SLIMP
-define('CREDITOR_REF', get_field('slimpay_creditor_ref', 'option'));
-define('API_KEY', get_field('slimpay_api_key', 'option'));
-define('SECR_KEY', get_field('slimpay_secret_key', 'option'));
 
-// Pages redirection form
-// Local
-define('RETURN_AFTER_URL', 32);
-define('NOTIFICATION_URL', 20);
-/*// Online
-define('RETURN_AFTER_URL', 44);
-define('NOTIFICATION_URL', 13);
-*/
 // LINKS
 
 define('FACEBOOK', 'https://www.facebook.com/');
@@ -48,15 +36,14 @@ define('TWITTER', 'https://twitter.com/');
 define('CONTACT_GENERAL', 'rollandyann@gmail.com');
 define('CONTACT_GENERAL_2', 'thibaut.caroli.pro@gmail.com');
 
-
 // ACTIVATE
 
 define('PAGE_EXCERPT', false);
 define('PAGE_TAXO', false);
 define('ADD_THUMBNAILS', false);
-define('CUSTOM_POST_TYPE', true);
-define('CUSTOM_TAXONOMY', true);
-define('ACF_OPTION_PAGE', true);
+define('CUSTOM_POST_TYPE', false);
+define('CUSTOM_TAXONOMY', false);
+define('ACF_OPTION_PAGE', false);
 define('DISALLOW_FILE_EDIT', true);
 
 

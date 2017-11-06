@@ -33,7 +33,7 @@ function initFluxiDelPost(){
                 url: ajax_object.ajax_url,
                 data: 'action='+ajaxAction+'&idp='+theIdp+'&toky='+toky,
                 success: function(data){
-
+                    
                     if(data[0].validation == 'error'){
                         $button.html('<i class="fa fa-trash" aria-hidden="true"></i>');
                         $notify.html('Erreur pendant suppression. Rechargez la page puis essayez à nouveau.');

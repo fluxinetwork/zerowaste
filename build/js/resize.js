@@ -66,7 +66,7 @@ function debouncer( func , timeout ) {
 }
 
 function debouncer_handler() {
-    calc_window();
+    calc_window();    
 }
 if ( resizeDebouncer ) {
     jQuery( window ).bind( "resize", debouncer(debouncer_handler) );
