@@ -27,9 +27,10 @@ add_action('acf/init', 'wpc_acf_init');
 
 // LINKS
 
-define('FACEBOOK', 'https://www.facebook.com/');
-define('TWITTER', 'https://twitter.com/');
-
+define('FACEBOOK', 'https://www.facebook.com/ZeroWasteFrance');
+define('TWITTER', 'https://twitter.com/ZeroWasteFR');
+define('GOOGLEPLUS', 'https://plus.google.com/116987230653729130155');
+define('YOUTUBE', 'https://www.youtube.com/channel/UCbgxqyPsPRNL_QWmNR6Zbxw/feed?view_as=public');
 
 // MAILS
 
@@ -41,9 +42,9 @@ define('CONTACT_GENERAL_2', 'thibaut.caroli.pro@gmail.com');
 define('PAGE_EXCERPT', false);
 define('PAGE_TAXO', false);
 define('ADD_THUMBNAILS', false);
-define('CUSTOM_POST_TYPE', false);
-define('CUSTOM_TAXONOMY', false);
-define('ACF_OPTION_PAGE', false);
+define('CUSTOM_POST_TYPE', true);
+define('CUSTOM_TAXONOMY', true);
+define('ACF_OPTION_PAGE', true);
 define('DISALLOW_FILE_EDIT', true);
 
 
