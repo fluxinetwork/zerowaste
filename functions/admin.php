@@ -109,7 +109,7 @@ add_action( 'admin_bar_menu', 'remove_wp_logo', 999 );
 Disable error login return
 */
 
-add_filter('login_errors', create_function( '$no_login_error', "return 'Mauvais identifiants';"));
+add_filter('login_errors', function( $no_login_error ) {return 'Mauvais identifiants';});
 
 
 /*
